@@ -1,0 +1,36 @@
+
+ body{
+    background-color:bisque;
+    color: white;
+} 
+#bookmarkTitle{
+    background: -webkit-linear-gradient(#ff0066, #2850ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Righteous', sans-serif;
+
+  }
+ h1{
+  font-family: 'Pacifico', cursive;
+ }
+  h1::after{
+    background-color: #fec260;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 0.9rem;
+    left: 75%;
+    bottom: 375px;
+    transform: translateX(-150%);
+    transition: all 0.3s ease-in-out;
+   
+}
+  h1:hover::after {
+      height: 2.2rem;
+      position: absolute;
+  }
+
+  
+
+ 

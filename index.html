@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="w-75 mx-auto py-3 position-relative">
+            <h1 class="mb-3 text-center text-black" >Bookmarker</h1>
+            <hr class="text-black fw-bolder"  style="border-top: dotted 1px;" >
+            <div class="w-75 mx-auto py-3 text-center fs-4" id="bookmarkTitle">
+                <i class="fa-solid fa-bookmark"></i> Bookmark your favourite sites <i class="fa-solid fa-bookmark"></i>
+            </div>
+            <div class="form-group mb-3">
+                <label for="siteName" class="mb-3 text-black"> <i class="fa-solid fa-book"></i> Site Name</label>
+                <input oninput="validateSiteName()" type="text" class="form-control" id="siteName"
+                    placeholder="Bookmark Name">
+                <p class="text-danger d-none " id="wrongName">InValid Name</p>
+            </div>
+            <div class="form-group mb-3">
+                <label for="siteURL" class="mb-3 text-black"> <i class="fa-solid fa-link"></i> Site URL</label>
+                <input oninput="isUrlValid()" type="text" class="form-control" id="siteURL" placeholder="Website URL">
+                <p class="text-danger d-none " id="wrongURL">InValid URL</p>
+            </div>
+            <button onclick="submit()" id="addProductBtn" class="btn  d-grid gap-2 col-2 mx-auto"
+                style="background-color:#d1512d; color:white">Submit</button>
+            <hr class="text-black fw-bolder"  style="border-top: dotted 1px;" >
+        </div>
+        <table class="table text-white text-center w-75 mx-auto">
+            <thead>
+                <th>index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tBody"></tbody>
+        </table>
+    </div>
+    
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
